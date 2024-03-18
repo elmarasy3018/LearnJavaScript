@@ -144,10 +144,12 @@ function getBook(id) {
 }
 
 const book = getBook(2);
+book;
 
 // const author = book.author;
 // const genres = book.genres;
-const { title, author, genres, publicationDate } = book;
+const { title, author, genres, publicationDate, pages, hasMovieAdaptation } =
+  book;
 
 author;
 genres;
@@ -168,8 +170,12 @@ const updatedBook = { ...book, isGood: true };
 
 updatedBook;
 
-const summary = `${title} is a book was written by ${author} was published in ${
+const summary = `${title} is a book was written by ${author} and was published in ${
   publicationDate.split("-")[0]
-}`;
+} and it has ${hasMovieAdaptation ? "" : "not"} been adapted as a move`;
 
 summary;
+
+// Ternary Operator
+const pagesText = pages > 100 ? "More than 100 pages" : "Less than 100 pages";
+pagesText;
