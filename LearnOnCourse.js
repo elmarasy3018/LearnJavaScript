@@ -179,3 +179,7 @@ summary;
 // Ternary Operator
 const pagesText = pages > 100 ? "More than 100 pages" : "Less than 100 pages";
 pagesText;
+
+// Arrow Function
+const getYear = (str) => str.split("-")[0];
+console.log(getYear(publicationDate));
