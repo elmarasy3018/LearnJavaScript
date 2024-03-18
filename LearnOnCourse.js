@@ -46,7 +46,10 @@ const data = [
     ],
     hasMovieAdaptation: false,
     pages: 295,
-    translations: {},
+    translations: {
+      chinese: "魔戒",
+      french: "Le Seigneur des anneaux",
+    },
     reviews: {
       goodreads: {
         rating: 4.16,
@@ -183,3 +186,13 @@ pagesText;
 // Arrow Function
 const getYear = (str) => str.split("-")[0];
 console.log(getYear(publicationDate));
+
+// Short Circuiting Operators
+console.log(true && "some text");
+console.log(false && "some text");
+
+console.log(true || "some text");
+console.log(false || "some text");
+
+const nameInSpanish = book.translations.spanish || "Not Translated";
+nameInSpanish;
