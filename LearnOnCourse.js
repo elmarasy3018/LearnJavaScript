@@ -196,3 +196,12 @@ console.log(false || "some text");
 
 const nameInSpanish = book.translations.spanish || "Not Translated";
 nameInSpanish;
+
+// Optional Chaining
+function getReviewsCount(params) {
+  const goodreads = params.reviews.goodreads?.reviewsCount ?? 0;
+  const librarything = params.reviews.librarything?.reviewsCount ?? 0;
+  return goodreads;
+}
+
+console.log(getReviewsCount(book));
