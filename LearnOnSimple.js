@@ -1,3 +1,4 @@
+// All off the data
 const data = [
   {
     id: 1,
@@ -149,17 +150,21 @@ function getBook(id) {
 const book = getBook(2);
 book;
 
-// const author = book.author;
-// const genres = book.genres;
+// Destructuring Objects and Arrays
 const { title, author, genres, publicationDate, pages, hasMovieAdaptation } =
   book;
+
+// const author = book.author;
+// const genres = book.genres;
 
 author;
 genres;
 
+// Rest/Spread Operator
+const [firstGenre, secondGenre, ...otherGenre] = genres;
+
 // const firstGenre = genres[0];
 // const secondGenre = genres[1];
-const [firstGenre, secondGenre, ...otherGenre] = genres;
 
 firstGenre;
 secondGenre;
@@ -173,6 +178,7 @@ const updatedBook = { ...book, isGood: true };
 
 updatedBook;
 
+// Template Literals
 const summary = `${title} is a book was written by ${author} and was published in ${
   publicationDate.split("-")[0]
 } and it has ${hasMovieAdaptation ? "" : "not"} been adapted as a move`;
